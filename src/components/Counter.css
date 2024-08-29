@@ -1,0 +1,24 @@
+.head {
+    text-align: center;
+    line-height: 0;
+}
+
+.Counter {
+    font-size: 30px;
+    margin: 0;
+    padding: 48px;
+    font-weight: normal;
+    font-size: clamp(24px, 4vw + 1rem, 48px);
+    background: hsla(171, 87%, 67%, 1);
+    background: linear-gradient(90deg, hsla(171, 87%, 67%, 1) 0%, hsla(236, 100%, 72%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(171, 87%, 67%, 1) 0%, hsla(236, 100%, 72%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(171, 87%, 67%, 1) 0%, hsla(236, 100%, 72%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#61F4DE", endColorstr="#6E78FF", GradientType=1 );
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+
+.head p span {
+    font-weight: bold;
+}

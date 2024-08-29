@@ -1,0 +1,15 @@
+.eye-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: .7rem;
+  gap: 5px;
+}
+
+.eye-checkbox {
+  display: none;
+}
+
+.eye-label svg {
+  font-size: clamp(17px, 4vw + 1rem, 20px);
+}

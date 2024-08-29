@@ -1,0 +1,25 @@
+.search-container {
+    position: relative;
+    width: 100%;
+    min-width: 300px;
+    max-width: 400px;
+  }
+  
+  .search {
+    width: calc(100% - 62px);
+    padding: 10px 15px;
+    padding-right: 40px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    box-sizing: border-box;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"%3E%3Cpath fill="%23aaa" d="M505 442.7L405.3 343c28.4-34.9 45.7-79 45.7-127.5C451 96.2 354.8 0 231 0S11 96.2 11 215.5 96.2 431 231 431c48.5 0 92.6-17.3 127.5-45.7l99.7 99.7c15 15 39.3 15 54.3 0s15-39.3 0-54.3zM231 385c-93.4 0-169.5-76.1-169.5-169.5S137.6 46 231 46s169.5 76.1 169.5 169.5S324.4 385 231 385z"/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+  }
+  
+  .search:focus {
+    outline-color: #61dafa;
+  }
