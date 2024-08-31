@@ -1,0 +1,13 @@
+.container {
+    height: 100%;
+    padding: 30px;
+    margin: 30px;
+}
+
+.container img {
+    width: 20rem;
+}
+
+.container p {
+    font-size: clamp(15px, 4vw + 1rem, 30px);;
+}

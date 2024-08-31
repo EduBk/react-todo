@@ -16,7 +16,7 @@ const EyeToggle = ({ isChecked, setIsChecked }) => {
         onChange={handleCheckboxChange}
       />
       {isChecked ? <FaRegEye /> : <FaRegEyeSlash />}
-      {isChecked ? <span>Show completed task</span> : <span>Hide completed task</span>}
+      {isChecked ? <span>Hide completed task</span> : <span>Show completed task</span>}
     </label>
   )
 }

@@ -2,7 +2,7 @@
     background-color: #fefefe;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     height: 85vh;
     border-radius: 20px;
@@ -16,11 +16,76 @@
     font-size: clamp(24px, 4vw + 1rem, 48px);
 }
 
+.form-container p {
+    font-size: clamp(15px, 4vw + 1rem, 20px);
+}
+
 .todo-image {
     width: 100%;
     max-width: 700px;
     height: auto;
     object-fit: cover;
     border-radius: 10px;
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-left: auto;
 }
+
+.input-container {
+    position: relative;
+    display: flex;
+    height: 2.8rem;
+    width: 100%;
+    min-width: 200px;
+    max-width: calc(100% - 1px);
+    background-color: #fff;
+    border-radius: 8px;
+  }
+  
+  .input-container input {
+    height: 70%;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid  rgb(176 190 197);
+    background-color: transparent;
+    padding: 0.625rem 70px 0.625rem 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    color: rgb(69 90 100);
+    outline: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: all .15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .input-container input:focus {
+    border: 1px solid rgb(72, 181, 236);
+  }
+  
+  .invite-btn {
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    right: 4px;
+    top: 4px;
+    bottom: 4px;
+    z-index: 10;
+    border-radius: 4px;
+    background-color: rgb(72, 143, 236);
+    color: #fff;
+    vertical-align: middle;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none;
+    transition: .6s ease;
+  }
+  
+  .invite-btn:hover {
+    background-color: rgb(27, 99, 193);
+  }
+  
+  .input-container input:placeholder-shown ~ .invite-btn {
+    pointer-events: none;
+    background-color: gray;
+    opacity: 0.5;
+  }

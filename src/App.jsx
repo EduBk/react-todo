@@ -4,14 +4,22 @@ import { Counter } from './components/Counter'
 import { Search } from './components/Search'
 import { TodoList } from './components/TodoList'
 import { TodoItem } from './components/TodoItem'
-import { CrerateTodo } from './components/CreateTodo'
 import { EyeToggle } from './components/EyeToogle'
 import { FormTodo } from './components/FormTodo'
+import { Loading } from './components/Loading'
+import { Error } from './components/Error'
+import { EmptyLoad } from './components/EmptyLoad'
 import { useLocalStorage } from './hooks/LocalStorage'
 
 export function App () {
-  const [todos, saveTodos] = useLocalStorage('TODOS_V1', [])
+  const {
+    item: todos,
+    saveItem: saveTodos,
+    error,
+    loading
+  } = useLocalStorage('TODOS_V1', [])
   const [search, setSearch] = React.useState('')
+  const [newTask, setNewTask] = useState('')
   const completedTodo = todos.filter(todo => !!todo.completed).length
   const totalTodo = todos.length
   const searchedTodo = todos.filter((todo) => {
@@ -28,11 +36,13 @@ export function App () {
     return todo.completed === isChecked
   })
 
-  console.log(isChecked)
   return (
     <>
       <div className='form-todo'>
-        <FormTodo />
+        <FormTodo
+          newTask={newTask}
+          setNewTask={setNewTask}
+        />
       </div>
       <div className='todo-area'>
         <Counter total={totalTodo} completed={completedTodo} />
@@ -45,6 +55,9 @@ export function App () {
           setIsChecked={setIsChecked}
         />
         <TodoList>
+          {loading && <Loading />}
+          {error && <Error />}
+          {(!loading && filteredSearchedTodos.length === 0) && <EmptyLoad />}
           {filteredSearchedTodos.map(todo => (
             <TodoItem
               key={todo.text}
@@ -55,8 +68,6 @@ export function App () {
           ))}
         </TodoList>
       </div>
-
-      <CrerateTodo />
     </>
   )
 }
