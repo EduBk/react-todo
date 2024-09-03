@@ -26,5 +26,5 @@
   "eslintConfig": {
     "extends": "./node_modules/standard/eslintrc.json"
   },
-  "homepage": "https://github.com/EduBk/react-todo"
+  "homepage": "https://edubk.github.io/react-todo"
 }
