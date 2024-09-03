@@ -1,8 +1,14 @@
+import { useContext } from 'react'
+import { TodoContext } from '../context'
 import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa'
 
 import './EyeToogle.css'
 
-const EyeToggle = ({ isChecked, setIsChecked }) => {
+const EyeToggle = () => {
+  const {
+    isChecked,
+    setIsChecked
+  } = useContext(TodoContext)
   const handleCheckboxChange = () => {
     setIsChecked(prevState => !prevState)
   }
